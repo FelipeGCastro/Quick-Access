@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quick Access</title>
+
+    <style>
+        #textForm {
+            height: 200px;
+            min-width: 97%;
+            max-width: 98%;
+            align-content: center;
+        }
+
+        .inline {
+            display: inline;
+
+        }
+
+        p {
+            margin-top: 15px
+        }
+
+        div {
+            max-width: 85%;
+
+        }
+
+        .has-error {
+            border-color: red;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #postsChat div {
+            border-style: groove;
+            padding: 5px;
+            border-color: azure;
+            border-width: 5px;
+            background-color: azure;
+            min-width: 93%;
+        }
+
+        #postsAbs div {
+            border-style: groove;
+            padding: 5px;
+            border-color: burlywood;
+            border-width: 5px;
+            background-color: burlywood;
+            min-width: 93%;
+        }
+
+        #postsEmails div {
+            border-style: groove;
+            padding: 5px;
+            border-color: grey;
+            border-width: 5px;
+            background-color: grey;
+            min-width: 93%;
+        }
+
+        #postsEscalations div {
+            border-style: groove;
+            padding: 5px;
+            border-color: lightblue;
+            border-width: 5px;
+            background-color: lightblue;
+            min-width: 93%;
+        }
+
+        #postsOthers div {
+            border-style: groove;
+            padding: 5px;
+            border-color: lightgrey;
+            border-width: 5px;
+            background-color: lightgrey;
+            min-width: 93%;
+        }
+
+        #postsNews div {
+            border-style: groove;
+            padding: 5px;
+            border-color: lightsalmon;
+            border-width: 5px;
+            background-color: lightsalmon;
+            min-width: 93%;
+        }
+    </style>
+
+
+</head>
+<!-- Menus -->
+
+<body>
+    <div Id="allMenus">
+        <ol id="menuChat" style="background-color: azure; height:fit-content; ">
+            <h3>Chat</h3>
+
+
+        </ol>
+        <ol id="menuAbs" style="background-color:burlywood; height:fit-content; ">
+            <h3>ABS</h3>
+        </ol>
+        <ol id="menuEmails" style="background-color:cadetblue; height:fit-content; ">
+            <h3>Emails</h3>
+        </ol>
+        <ol id="menuEscalations" style="background-color: lightblue; height:fit-content; ">
+            <h3>Escalações</h3>
+        </ol>
+        <ol id="menuOthers" style="background-color: lightgrey; height:fit-content; ">
+            <h3>Outros</h3>
+        </ol>
+        <ol id="menuNews" style="background-color: lightsalmon; height:fit-content; ">
+            <h3>Novidades</h3>
+        </ol>
+    </div>
+
+
+    <!-- Posts -->
+    <!-- <a type="link" style="cursor: pointer; color: blue;" class="copy" value="f1">Copy</a>
+    <a type="link" style="cursor: pointer; color: blue;" class="copy" value="f2">Copy</a>
+    <a type="link" style="cursor: pointer; color: blue;" class="copy" value="f3">Copy</a> -->
+
+    <h1 style="margin: 50px">Textos</h1>
+
+    <table id="postsChat">
+        <h3 style="background-color: azure; height:fit-content; ">CHAT</h3>
+
+
+    </table>
+    <table id="postsAbs">
+        <h3 style="background-color:burlywood; height:fit-content; ">ABS</h3>
+
+    </table>
+    <table id="postsEmails">
+        <h3 style="background-color:cadetblue; height:fit-content; ">EMAILS</h3>
+
+
+    </table>
+    <table id="postsEscalations">
+        <h3 style="background-color:lightblue; height:fit-content; ">Escalações</h3>
+
+
+    </table>
+    <table id="postsOthers">
+        <h3 style="background-color:lightgrey; height:fit-content; ">Outros</h3>
+
+
+    </table>
+    <table id="postsNews">
+        <h3 style="background-color:lightsalmon; height:fit-content; ">NOVIDADES</h3>
+
+    </table>
+    <!--      -->
+
+    <!-- <div>
+        <h3>Home Console</h3>
+        <p id="f1">ó para o teste de copiar o texto para o </p>
+    </div>
+    <div>
+        <h3>Home Console</h3>
+        <p id="f2">ó para o teste dddddddddd </p>
+    </div>
+    <div>
+        <h3>Home Console</h3>
+        <p id="f3">ó para o testecc ccccccccccccccccc </p>
+    </div> -->
+    <!-- Form space -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <form id="fieldFormUpdate" class="modal-content">
+
+            <label for="titleForm">Titulo:</label>
+            <input placeholder="Titulo do texto" id="titleForm" type="text" name="titleForm"
+                style="max-width: 100%;"><br>
+            <label for="categories">Categorias:</label>
+            <select id="categories" name="categories" style="max-width: 100%; margin-top: 5px; margin-bottom: 5px;">
+                <option value="chat">Chat</option>
+                <option value="abs">A B S</option>
+                <option value="emails">Emails</option>
+                <option value="escalations">Escalações</option>
+                <option value="others">Outros</option>
+                <option value="news">Novidades</option>
+
+            </select><br>
+            <textarea placeholder="Texto que será usado para ser copidado" id="textForm" type="text" name="textForm"
+                style="max-width: 100%;"></textarea>
+            <br>
+            <button id="submitUpdate" type="submit" value="Submit">Guardar</button>
+            <button id="cancelUpdate" type="submit" value="Submit">Cancelar</button>
+        </form>
+
+    </div>
+    <form id="fieldForm">
+        <label for="titleForm">Titulo:</label>
+        <input placeholder="Titulo do texto" id="titleForm" type="text" name="titleForm" style="max-width: 100%;"><br>
+        <label for="categories">Categorias:</label>
+        <select id="categories" name="categories" style="max-width: 100%; margin-top: 5px; margin-bottom: 5px;">
+            <option value="chat">Chat</option>
+            <option value="abs">A B S</option>
+            <option value="emails">Emails</option>
+            <option value="escalations">Escalações</option>
+            <option value="others">Outros</option>
+            <option value="news">Novidades</option>
+
+        </select><br>
+        <textarea placeholder="Texto que será usado para ser copidado" id="textForm" type="text" name="textForm"
+            style="max-width: 100%;"></textarea>
+        <br>
+        <button id="submit" type="submit" value="Submit">Guardar</button>
+    </form>
+
+
+    <p id="textExemple">Esse texto é só para o teste de copiar o texto para o clipboard</p>
+
+    <button id="downloadFile" type="submit" value="download">Guardar Tudo</button>
+    <script src="json/posts.txt"></script>
+    <script src="classes/Utils.js"></script>
+    <script src="models/Post.js"></script>
+    <script src="controllers/PostController.js"></script>
+    <script src="./index.js"></script>
+    
+
+
+
+
+
+</body>
+
+</html>
